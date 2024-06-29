@@ -181,7 +181,8 @@ body
     background-color: #48070F;
     color: rgb(255, 255, 255);
     text-decoration-line: underline;
-    transition: all 0.5s;
+    transition: all 0.5s linear;
+  
 }
 
 .aboutme>ul{
@@ -227,13 +228,44 @@ body
 #education
 {
     display: none;
+    width: 50%;
+    height: 60%;
+    background-color:#B66D00;
+    color:whitesmoke;
+    position: relative;
+}
+#education>ul{
+    list-style: none;
+    font-size: 25px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
 }
 #hobbies
 {
     display: none;
+    width: 50%;
+    height: 60%;
+    background-color:#B66D00;
+    color:whitesmoke;
+    position: relative;
+}
+#hobbies>ul{
+    list-style: none;
+    font-size: 25px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
 }
 .heading.activate{
     transform: translateX(-300%);
+}
+.heading.deactivate{
+    transform: translateX(0%);
 }
 .category>.open
 {

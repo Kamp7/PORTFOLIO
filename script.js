@@ -19,11 +19,12 @@ let category=document.querySelectorAll(".category");
 drop.forEach((ele,i)=>{
     ele.addEventListener('click',()=>{
         console.log(ele,i);
-        ele.style.display="none";
         heading.classList.add("activate");
-        open[i].style.display="block";
         setTimeout(() => {
             heading.style.display="none";
+            closeall();
+            open[i].style.display="block";
+            ele.style.display="none";
             if(i==0)
                 {
                  skill.style.display="block";
@@ -43,4 +44,25 @@ drop.forEach((ele,i)=>{
        
     });
     
+});
+function closeall()
+{
+    category.forEach((ele,i)=>{
+        ele.style.background="#48070F";
+        skill.style.display="none";
+        education.style.display="none";
+        hobbies.style.display="none";
+        open[i].style.display="none";
+        drop[i].style.display="block";
+    });
+};
+open.forEach((ele)=>{
+    ele.addEventListener("click",()=>{
+        closeall();
+        heading.style.display="block";
+        setTimeout(() => {
+        heading.classList.remove("activate");
+    heading.classList.add('deactivate');},600);
+
+    });
 });
