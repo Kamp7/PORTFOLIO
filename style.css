@@ -40,6 +40,7 @@ body
     font-size: 40px;
     cursor: pointer;
     
+    
 }
 .navbar
 {
@@ -215,6 +216,9 @@ body
     text-decoration-line: underline;
     transition: all 0.5s linear;
     box-shadow:0px 0px 10px 5px #b53744;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   
 }
 .heading h1{
@@ -308,7 +312,7 @@ body
     
 }
 .heading.activate{
-    transform: translateX(-300%);
+    transform: translateX(-400%);
 }
 .heading.deactivate{
     transform: translateX(0%);
@@ -347,12 +351,11 @@ body
     height: 100%;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: end;
 }
 #contact>.container>form{
     width: 60%;
     height: 60%;
-    align-self: center;
 }
 
 .social
@@ -366,10 +369,13 @@ body
 }
 .social>a>img{
     width: 40px;
+    box-shadow:0px 0px 10px 5px #b53744;
+    border-radius: 50%;
     
 }
 .social a{
     width: 40px;
+    border-radius: 50%;
     cursor: pointer;
 }
 #contact h2{
@@ -386,6 +392,9 @@ body
     box-shadow:0px 0px 10px 5px #b53744;
 
 }
+.social img:hover{
+    transform: scale(1.2);
+}
 @media screen and (max-width: 426px) {
    .navbar>ul{
    font-size: 18px;
@@ -396,8 +405,6 @@ body
     min-width: 280px;
     height: 60px;
    }
-   
-   
     #content>.photo
     {
         display: none;
@@ -468,5 +475,174 @@ body
     {
        height: 20%;
        width: 100%;
+    }
+
+}
+@media  screen and (min-width: 2560px) {
+    .nav-icon
+    {
+        width: 500px;
+        height: 500px;
+        
+    }
+    .nav-icon>#menu
+    {
+      font-size: 120px;
+      transform: translate(-50%,-50%);
+    }
+    .navbar{
+       min-width: 60%;
+       height: 150px;
+    }
+    .navbar ul
+    {
+        height: 150px;
+    }
+    .navbar>ul>li
+    {
+        font-size: 60px;
+    }
+    #content>.text>.basic
+    {
+        font-size: 40px;
+    }
+    #content>.text>.basic>h1
+    {
+        font-size: 80px;
+    }
+    #content>.text>.basic>h4
+    {
+        font-size: 50px;
+    }
+    .links>.github{
+       margin: 20px;
+    }
+    .links>.github a{
+        width: 100%;
+        height: 80px;
+        font-size: 30px;
+    }
+    .links>.linkedin{
+        margin: 20px;
+     }
+    .links>.linkedin a{
+        width: 100%;
+        height: 80px;
+        font-size: 30px;
+    }
+    #about>.container>.heading
+    {
+        width: 550px;
+        height: 300px;
+        
+    }
+    #about>.container>.heading h1
+    {
+        font-size: 150px;
+    }
+    #about>.container>.aboutme>ul>.category>li{
+        font-size: 50px;
+    }
+    #about>.container>.aboutme>ul>.category
+    {
+        width: 300px;
+        height: 140px;
+    }
+    #about>.container>.aboutme>ul>.category>.drop{
+        font-size: 50px;
+    }
+    #about>.container>.aboutme>ul>.category>.open{
+        font-size: 50px;
+    }
+    #skill
+    {
+        width: 60%;
+    }
+    #skill>ul
+    {
+        font-size: 50px;
+    }
+    #education
+    {
+        width: 60%;
+    }
+    #education>ul
+    {
+        font-size: 50px;
+    }
+    #hobbies
+    {
+        width: 60%;
+    }
+    #hobbies>ul
+    {
+        font-size: 50px;
+    }
+    #contact h2
+    {
+        margin-top: 20px;
+        font-size: 65px;
+    }
+    #contact>.container
+    {
+        flex-direction: column;
+        height: 80%;
+        position: relative;
+        top:20%;
+        
+    }
+    #contact>.container>form input
+    {
+        height: 120px;
+        font-size: 30px;
+    }
+    #contact>.container>form
+    {
+        width: 100%;
+        height: 70%;
+        font-size: 40px;
+    }
+    #contact>.container>form>.row>.col>.form-floating>#floatingInput
+    {
+        min-height: 150px;
+        font-size: 40px;
+    }
+    #contact>.container>form>.form-floating>#floatingInput
+    {
+        min-height: 150px;
+        font-size: 40px;
+    }
+    #contact>.container>form>.form-floating
+    {
+        font-size: 40px;
+    }
+    #contact>.container>form>#form-floating>#floatingTextarea2
+        {
+            font-size: 40px;
+            min-height: 500px;
+        }
+    #contact>.container button
+    {
+        width: 200px;
+        height: 80px;
+        font-size: 40px;
+    }
+        
+    #contact>.container>.social
+    {
+        height: 20%;
+        width: 100%;
+    }
+    #contact>.container>.social img
+    {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+    #contact>.container>.social a
+    {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
     }
 }
