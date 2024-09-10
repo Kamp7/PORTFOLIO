@@ -39,8 +39,6 @@ body
 {
     font-size: 40px;
     cursor: pointer;
-    
-    
 }
 .navbar
 {
@@ -57,7 +55,6 @@ body
     left: 0;
     z-index: 2;
     display: none;
-
 }
 .navbar>ul
 {
@@ -207,6 +204,7 @@ body
     display: flex;
     justify-content: space-around;
     align-items: center;
+    
 }
 .heading
 {
@@ -219,7 +217,7 @@ body
     display: flex;
     align-items: center;
     justify-content: center;
-  
+    
 }
 .heading h1{
     font-size: 100px;
@@ -240,6 +238,7 @@ body
     background-color: #48070F;
     color:white;
     box-shadow:0px 0px 10px 5px #b53744;
+    transition: all 1s;
 }
 .category>.drop
 {
@@ -279,6 +278,7 @@ body
     color:whitesmoke;
     position: relative;
     box-shadow:0px 0px 10px 5px #b53744;
+    
 }
 #education>ul{
     list-style:"⇒ ";
@@ -300,6 +300,7 @@ body
     color:whitesmoke;
     position: relative;
     box-shadow:0px 0px 10px 5px #b53744;
+    
 }
 #hobbies>ul{
     list-style:"⇒ ";
@@ -313,15 +314,40 @@ body
 }
 .heading.activate{
     transform: translateX(-400%);
+   animation: left 2s ease-in-out;
+}
+@keyframes left {
+    0%
+    {
+        transform: translateX(0%);
+    }
+    100%
+    {
+        transform: translateX(-400%);
+    }
+    
 }
 .heading.deactivate{
+    
     transform: translateX(0%);
+    animation: right 2s ease-in-out;
 }
+@keyframes right {
+    0%
+    {
+        transform: translateX(-400%);
+    }
+    100%{
+      transform: translateX(0%);
+    }
+
+    }
 .category>.open
 {
     display: none;
     font-size: 45px;
     cursor: pointer;
+    
 }
 ::-webkit-scrollbar
 {
@@ -556,7 +582,8 @@ body
     }
     #skill
     {
-        width: 60%;
+        width: min-content;
+        padding: 40px;
     }
     #skill>ul
     {
@@ -564,7 +591,8 @@ body
     }
     #education
     {
-        width: 60%;
+        width: min-content;
+        padding: 40px;
     }
     #education>ul
     {
@@ -572,7 +600,8 @@ body
     }
     #hobbies
     {
-        width: 60%;
+        width: min-content;
+        padding: 40px;
     }
     #hobbies>ul
     {

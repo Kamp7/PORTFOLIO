@@ -1,8 +1,6 @@
 let menu=document.querySelector("#menu");
 let navIcon=document.querySelector(".nav-icon");
 let navBar=document.querySelector(".navbar");
-let nav=document.querySelector
-
 menu.addEventListener('click',()=>{
 navIcon.style.display="none";
 navBar.style.display="block";
@@ -55,14 +53,16 @@ function closeall()
         open[i].style.display="none";
         drop[i].style.display="block";
     });
+
 };
 open.forEach((ele)=>{
     ele.addEventListener("click",()=>{
         closeall();
-        heading.style.display="block";
         setTimeout(() => {
-        heading.classList.remove("activate");
-    heading.classList.add('deactivate');},600);
+            heading.classList.remove("activate");           
+            heading.classList.add('deactivate');
+            heading.style.display="block";},600);
+            
 
     });
 });
